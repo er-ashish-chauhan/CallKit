@@ -1,19 +1,9 @@
-import { combineReducers } from 'redux'
+import { combineReducers } from 'redux';
 
 import userReducer from './userReducer';
 
 const appReducer = combineReducers({
-    userReducer,
+    user: userReducer,
 })
 
-const rootReducer = (state, action) => {
-    if (action.type === 'app/DESTROY') {
-        state = {
-            navigation: state.navigation
-        }
-    }
-
-    return appReducer(state, action)
-}
-
-export default rootReducer
+export default appReducer

@@ -1,8 +1,13 @@
 import React from "react";
 import Navigation from "./routes";
 import { Provider } from 'react-redux'
-import configureStore from './store'
-const store = configureStore();
+import appReducer from "./store/reducers";
+import ReduxThunk from 'redux-thunk';
+import { createStore, combineReducers, applyMiddleware } from 'redux';
+const store = createStore(
+    appReducer,
+    applyMiddleware(ReduxThunk)
+)
 const App = () => {
     return (
         <Provider store={store}>

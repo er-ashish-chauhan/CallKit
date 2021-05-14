@@ -7,7 +7,7 @@ import {
 } from "react-native";
 import messaging from '@react-native-firebase/messaging';
 import { useDispatch } from "react-redux";
-
+import * as userActions from "../../store/actions/userActions";
 
 const SplashScreen = (props) => {
 
@@ -23,11 +23,12 @@ const SplashScreen = (props) => {
         if (enabled) {
             console.log('Authorization status:', authStatus);
             const fcmToken = await messaging().getToken();
-
+            
             console.log(fcmToken, "FCMToken")
 
             try{
-                // await dispatch(store)
+                dispatch( userActions.storeToken(fcmToken));
+                props.navigation.navigate("Dashboard")
             }catch(err){
                 console.log(err)
             }

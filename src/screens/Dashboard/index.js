@@ -4,6 +4,7 @@ import { FlatList, PermissionsAndroid, Text, TouchableOpacity, View } from "reac
 import Contacts from 'react-native-contacts';
 import Screen from "../../components/HOC/Screen";
 import { Endpoint } from 'react-native-sip2';
+import { shallowEqual, useSelector } from 'react-redux'
 
 const endpoint = new Endpoint();
 
@@ -12,8 +13,8 @@ const DashboardScreen = props => {
     //List of available accounts and calls when RN context is started, could not be empty because Background service is working on Android
 
     const [contacts, setContacts] = useState([]);
-
-
+    const fcmToken = useSelector(state => state.user.fcmToken);
+    console.log(fcmToken, "fcm...")
 
     const getContacts = () => {
         PermissionsAndroid.request(
@@ -46,7 +47,7 @@ const DashboardScreen = props => {
         console.log("connectivity:\n", connectivity);
 
         // Subscribe to endpoint events
-        endpoint.on("registration_changed", (account) => {
+        endpoint.on("registration_changed", async (account) => {
             console.log("registration_changed", account);
 
             let options = {
@@ -56,8 +57,7 @@ const DashboardScreen = props => {
                 }
             }
 
-            let call = endpoint.makeCall(account, "79214334799", options);
-
+            let call = await endpoint.makeCall(account, "+917206330362", options);
 
         });
         endpoint.on("connectivity_changed", (online) => {
@@ -92,20 +92,51 @@ const DashboardScreen = props => {
 
 
     const createAccount = async () => {
-        var configuration = {
-            name: "Ashraf",
-            username: "Ashraf",
-            domain: "pbx.sarhaantech.ca",
-            password: "819839a1eb941f7af5d04fddf0d8d748",
-            transport: null, // Default TCP
-            proxy: "99.79.131.132:5160",
-            proxy:null,
-            regServer: "pbx.sarhaantech.ca", // Default wildcard
-            regTimeout: 4000,// Default 3600/ Default 3600
-            // regHeaders: {
-            //     "X-Custom-Header": "Value"
-            // },
-            // regContactParams: ";unique-device-token-id=1002"
+        // var configuration = {
+        //     name: "Ashraf",
+        //     username: "Ashraf",
+        //     domain: "pbx.sarhaantech.ca:5160",
+        //     password: "819839a1eb941f7af5d04fddf0d8d748",
+        //     transport: null, // Default TCP
+        //     proxy: "99.79.131.132:5160",
+        //     proxy:null,
+        //     regServer: "pbx.sarhaantech.ca:5160",
+        //     regHeaders: {
+        //         "X-Custom-Header": "Value"
+        //     },
+        //     regContactParams: ";unique-device-token-id="+fcmToken
+        // };
+
+        let configuration = {
+            "name": "Ashraf", 
+
+            "username": "1002",
+            "password": "819839a1eb941f7af5d04fddf0d8d748",
+            "domain": "pbx.sarhaantech.ca:5160",
+            "regServer": "",
+            "proxy": null,
+            "transport": "UDP",//null, // Default TCP
+            "regTimeout": 3600, // Default 3600
+            "regHeaders": {
+                //"X-Custom-Header": "Value"
+            },
+            "regContactParams": ";unique-device-token-id="+fcmToken,
+            "regOnAdd": true,  // Default true, use false for manual REGISTRATION
+
+            service: {
+                ua: "siptest",
+                stun: ['stun.l.google.com:19302', 'stun4.l.google.com:19302']
+            },
+
+            network: {
+                useAnyway: true,           // Default: true
+                useWifi: true,              // Default: true
+                use3g: true,                // Default: false
+                useEdge: true,             // Default: false
+                useGprs: true,             // Default: false
+                useInRoaming: true,        // Default: false
+                useOtherNetworks: true      // Default: false
+            }
         };
 
         try {
