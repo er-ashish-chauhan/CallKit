@@ -5,6 +5,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 
 import DashboardScreen from "../screens/Dashboard";
 import SplashScreen from "../screens/Splash";
+import AccountScreen from "../screens/CreateAccount";
 import { Icon } from "native-base";
 import { colors } from "../shared";
 const Stack = createStackNavigator();
@@ -56,7 +57,7 @@ const tabNavigation = () => {
             }}>
             <Tab.Screen name="Contacts" component={DashboardScreen} />
             <Tab.Screen name="Keypad" component={DashboardScreen} />
-            <Tab.Screen name="Settings" component={DashboardScreen} />
+            <Tab.Screen name="Accounts" component={AccountScreen} />
         </Tab.Navigator>
     )
 }

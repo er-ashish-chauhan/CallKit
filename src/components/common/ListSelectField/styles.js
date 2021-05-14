@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native'
-import {correctFontSizeForScreen} from '../../../utils/scale'
+// import {correctFontSizeForScreen} from '../../../utils/scale'
 
 export default StyleSheet.create({
   optionTouchable: {
@@ -10,7 +10,7 @@ export default StyleSheet.create({
   },
   optionTitle: {
     flex: 1,
-    fontSize: correctFontSizeForScreen(15),
+    fontSize: 15,
     color: "#000"
   },
   optionIcon: {

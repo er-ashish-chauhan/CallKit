@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native'
-import {correctFontSizeForScreen} from '../../../utils/scale'
+// import {correctFontSizeForScreen} from '../../../utils/scale'
 
 export default StyleSheet.create({
   listContainer: {
@@ -10,11 +10,11 @@ export default StyleSheet.create({
     flex: 1
   },
   listTitle: {
-    fontSize: correctFontSizeForScreen(15),
+    fontSize: 15,
     color: "#000"
   },
   listPlaceholder: {
-    fontSize: correctFontSizeForScreen(11),
+    fontSize: 11,
     color: "#666"
   },
   listIconContainer: {
@@ -43,7 +43,7 @@ export default StyleSheet.create({
   modalTitle: {
     textAlign: 'center',
     flex: 1,
-    fontSize: correctFontSizeForScreen(21)
+    fontSize: 21
   },
   modalSubmitTouchable: {
     backgroundColor: "#E7ECEF",
@@ -60,7 +60,7 @@ export default StyleSheet.create({
     justifyContent: 'center'
   },
   modalSubmitText: {
-    fontSize: correctFontSizeForScreen(13),
+    fontSize: 13,
     color: "#000"
   },
   modalClose: {

@@ -1,5 +1,5 @@
 import {StyleSheet} from 'react-native'
-import {correctFontSizeForScreen} from '../../../utils/scale'
+// import {correctFontSizeForScreen} from '../../../utils/scale'
 
 export default StyleSheet.create({
   gradient: {
@@ -11,6 +11,6 @@ export default StyleSheet.create({
   },
   text: {
     color: '#3F5057',
-    fontSize: correctFontSizeForScreen(13)
+    fontSize: 13
   }
 })

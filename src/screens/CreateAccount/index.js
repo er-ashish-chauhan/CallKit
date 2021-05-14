@@ -3,16 +3,16 @@ import PropTypes from 'prop-types'
 import {TouchableHighlight, View, Text, ScrollView} from 'react-native'
 
 import {connect} from 'react-redux'
-import * as Navigation from '../../modules/navigation'
-import {createAccount, deleteAccount} from '../../modules/pjsip'
+// import * as Navigation from '../../modules/navigation'
+// import {createAccount, deleteAccount} from '../../modules/pjsip'
 
-import Header from '../../components/common/Header'
+// import Header from '../../components/common/Header'
 import ListSection from '../../components/common/ListSection'
 import ListTextField from '../../components/common/ListTextField'
 import ListSelectField from '../../components/common/ListSelectField'
 import ListFieldSeparator from '../../components/common/ListFieldSeparator'
 
-import s from './styles'
+import cs from './styles'
 
 class AccountScreen extends Component {
 
@@ -101,20 +101,20 @@ class AccountScreen extends Component {
 
     platformHeaderProps['leftItem'] = {
       title: 'Back',
-      icon: require('../../assets/images/header/back_white.png'),
+    //   icon: require('../../assets/images/header/back_white.png'),
       layout: 'icon',
       onPress: this.props.onBackPress
     }
     platformHeaderProps['rightItem'] = {
       title: 'Create',
-      icon: require('../../assets/images/header/ok_white.png'),
+    //   icon: require('../../assets/images/header/ok_white.png'),
       layout: 'icon',
       onPress: this._onSubmitPress
     }
 
     return (
       <View style={cs.max}>
-        <Header title={this.props.account ? this.props.account.getName() : "New account"} {...platformHeaderProps} />
+        {/* <Header title={this.props.account ? this.props.account.getName() : "New account"} {...platformHeaderProps} /> */}
 
         <ScrollView keyboardShouldPersistTaps='always' style={cs.max}>
           <ListSection title="General"/>
@@ -217,7 +217,7 @@ AccountScreen.propTypes = {
 
 function select(store) {
   return {
-    account: store.navigation.current.account
+    // account: store.navigation.current.account
   }
 }
 
