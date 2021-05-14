@@ -1,0 +1,6 @@
+module Pods_CallKit {
+  umbrella header "Pods-CallKit-umbrella.h"
+
+  export *
+  module * { export * }
+}

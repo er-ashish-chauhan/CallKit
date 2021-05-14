@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="Gradle: com.twilio:voice-android:4.5.0@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0b2fb70610944c79284fe405eb492446/jetified-voice-android-4.5.0/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0b2fb70610944c79284fe405eb492446/jetified-voice-android-4.5.0/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0b2fb70610944c79284fe405eb492446/jetified-voice-android-4.5.0/AndroidManifest.xml" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/0b2fb70610944c79284fe405eb492446/jetified-voice-android-4.5.0/jars/libs/libwebrtc.jar!/" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.twilio/voice-android/4.5.0/877abd9bfb4ae200f7066ed5d11c21fd3b52f698/voice-android-4.5.0-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.twilio/voice-android/4.5.0/f322192a294016a496885203b01bee709cb563fe/voice-android-4.5.0-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

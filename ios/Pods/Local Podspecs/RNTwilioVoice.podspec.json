@@ -1,0 +1,35 @@
+{
+  "name": "RNTwilioVoice",
+  "version": "4.4.0",
+  "summary": "React Native wrapper for Twilio Programmable Voice SDK",
+  "authors": "Fabrizio Moscon",
+  "homepage": "https://github.com/hoxfon/react-native-twilio-programmable-voice",
+  "license": "MIT",
+  "platforms": {
+    "ios": "11.0"
+  },
+  "requires_arc": true,
+  "source_files": "ios/RNTwilioVoice/*.{h,m}",
+  "source": {
+    "git": "https://github.com/hoxfon/react-native-twilio-programmable-voice",
+    "tag": "4.4.0"
+  },
+  "dependencies": {
+    "React-Core": [
+
+    ],
+    "TwilioVoice": [
+      "~> 5.2.0"
+    ]
+  },
+  "xcconfig": {
+    "FRAMEWORK_SEARCH_PATHS": "${PODS_ROOT}/TwilioVoice/Build/iOS"
+  },
+  "frameworks": "TwilioVoice",
+  "preserve_paths": [
+    "LICENSE",
+    "README.md",
+    "package.json",
+    "index.js"
+  ]
+}

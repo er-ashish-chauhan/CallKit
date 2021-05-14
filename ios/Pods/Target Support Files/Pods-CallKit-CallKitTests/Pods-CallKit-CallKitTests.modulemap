@@ -1,0 +1,6 @@
+module Pods_CallKit_CallKitTests {
+  umbrella header "Pods-CallKit-CallKitTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

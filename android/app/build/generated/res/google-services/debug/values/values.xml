@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">1029383803569-t7muubl65rloksoqj40q65m12egc3ovk.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">1029383803569</string>
+    <string name="google_api_key" translatable="false">AIzaSyDiQ5Hpsn5-w_p8PciYB1-JdDaQEb14cbk</string>
+    <string name="google_app_id" translatable="false">1:1029383803569:android:8fe779cab3b9b148b38890</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyDiQ5Hpsn5-w_p8PciYB1-JdDaQEb14cbk</string>
+    <string name="google_storage_bucket" translatable="false">callkit-de7c3.appspot.com</string>
+    <string name="project_id" translatable="false">callkit-de7c3</string>
+</resources>

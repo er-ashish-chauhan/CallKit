@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1029383803569",
+    "project_id": "callkit-de7c3",
+    "storage_bucket": "callkit-de7c3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1029383803569:android:8fe779cab3b9b148b38890",
+        "android_client_info": {
+          "package_name": "com.callkit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1029383803569-t7muubl65rloksoqj40q65m12egc3ovk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDiQ5Hpsn5-w_p8PciYB1-JdDaQEb14cbk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1029383803569-t7muubl65rloksoqj40q65m12egc3ovk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

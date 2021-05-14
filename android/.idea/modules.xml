@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/CallKit.iml" filepath="$PROJECT_DIR$/.idea/modules/CallKit.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/CallKit.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/CallKit.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1383882689/CallKit.react-native-callkeep.iml" filepath="$PROJECT_DIR$/.idea/modules/1383882689/CallKit.react-native-callkeep.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1679641137/CallKit.react-native-community_masked-view.iml" filepath="$PROJECT_DIR$/.idea/modules/-1679641137/CallKit.react-native-community_masked-view.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/179374385/CallKit.react-native-contacts.iml" filepath="$PROJECT_DIR$/.idea/modules/179374385/CallKit.react-native-contacts.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1176057141/CallKit.react-native-firebase_app.iml" filepath="$PROJECT_DIR$/.idea/modules/-1176057141/CallKit.react-native-firebase_app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1484614120/CallKit.react-native-gesture-handler.iml" filepath="$PROJECT_DIR$/.idea/modules/1484614120/CallKit.react-native-gesture-handler.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1635164980/CallKit.react-native-reanimated.iml" filepath="$PROJECT_DIR$/.idea/modules/1635164980/CallKit.react-native-reanimated.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1436395601/CallKit.react-native-safe-area-context.iml" filepath="$PROJECT_DIR$/.idea/modules/1436395601/CallKit.react-native-safe-area-context.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1326385577/CallKit.react-native-screens.iml" filepath="$PROJECT_DIR$/.idea/modules/1326385577/CallKit.react-native-screens.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1253482122/CallKit.react-native-sip2.iml" filepath="$PROJECT_DIR$/.idea/modules/-1253482122/CallKit.react-native-sip2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/2137671851/CallKit.react-native-twilio-programmable-voice.iml" filepath="$PROJECT_DIR$/.idea/modules/2137671851/CallKit.react-native-twilio-programmable-voice.iml" />
+    </modules>
+  </component>
+</project>

@@ -1,0 +1,1 @@
+../../../../../node_modules/react-native-sip2/ios/RTCPjSip/PjSipMessage.h

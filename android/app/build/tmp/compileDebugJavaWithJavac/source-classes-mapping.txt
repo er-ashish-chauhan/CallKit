@@ -1,0 +1,14 @@
+com/callkit/MainApplication.java
+ com.callkit.MainApplication
+ com.callkit.MainApplication$1
+com/callkit/ReactNativeFlipper.java
+ com.callkit.ReactNativeFlipper
+ com.callkit.ReactNativeFlipper$1
+ com.callkit.ReactNativeFlipper$2
+ com.callkit.ReactNativeFlipper$2$1
+com/callkit/MainActivity.java
+ com.callkit.MainActivity
+com/callkit/BuildConfig.java
+ com.callkit.BuildConfig
+com/facebook/react/PackageList.java
+ com.facebook.react.PackageList

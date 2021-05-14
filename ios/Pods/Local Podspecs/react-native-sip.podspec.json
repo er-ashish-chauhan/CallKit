@@ -1,0 +1,25 @@
+{
+  "name": "react-native-sip",
+  "version": "3.0.2",
+  "summary": "SIP module based on PjSIP for React Native",
+  "license": null,
+  "authors": {
+    "name": "Anton Dodonov",
+    "email": "cpodimas@gmail.com"
+  },
+  "homepage": "https://github.com/telefon-one/react-native-sip2/",
+  "platforms": {
+    "ios": "9.0"
+  },
+  "source": {
+    "git": "https://github.com/florindumitru/react-native-sip.git",
+    "tag": "v3.0.2"
+  },
+  "source_files": "ios/**/*.{h,m}",
+  "vendored_frameworks": "ios/VialerPJSIP.framework",
+  "dependencies": {
+    "React": [
+
+    ]
+  }
+}
