@@ -15,7 +15,7 @@ const SplashScreen = (props) => {
 
     async function requestUserPermission() {
         const authStatus = await messaging().requestPermission();
-        
+
         const enabled =
             authStatus === messaging.AuthorizationStatus.AUTHORIZED ||
             authStatus === messaging.AuthorizationStatus.PROVISIONAL;
@@ -23,13 +23,14 @@ const SplashScreen = (props) => {
         if (enabled) {
             console.log('Authorization status:', authStatus);
             const fcmToken = await messaging().getToken();
-            
+
             console.log(fcmToken, "FCMToken")
 
-            try{
-                dispatch( userActions.storeToken(fcmToken));
-                props.navigation.navigate("Dashboard")
-            }catch(err){
+            try {
+                dispatch(userActions.storeToken(fcmToken));
+                // props.navigation.navigate("Dashboard")
+                props.navigation.navigate("Calling")
+            } catch (err) {
                 console.log(err)
             }
         }

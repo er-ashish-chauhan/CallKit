@@ -6,6 +6,7 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import DashboardScreen from "../screens/Dashboard";
 import SplashScreen from "../screens/Splash";
 import AccountScreen from "../screens/CreateAccount";
+import Calling from "../screens/Calling";
 import { Icon } from "native-base";
 import { colors } from "../shared";
 const Stack = createStackNavigator();
@@ -23,6 +24,7 @@ const Navigations = props => {
                 initialRouteName="Splash">
                 <Stack.Screen name="Dashboard" component={tabNavigation} />
                 <Stack.Screen name="Splash" component={SplashScreen} />
+                <Stack.Screen name="Calling" component={Calling} />
             </Stack.Navigator>
         </NavigationContainer>
     )
@@ -50,8 +52,8 @@ const tabNavigation = () => {
             tabBarOptions={{
                 activeTintColor: colors.primary,
                 inactiveTintColor: 'gray',
-                allowFontScaling:false,
-                labelStyle:{
+                allowFontScaling: false,
+                labelStyle: {
                     fontSize: 15.5
                 }
             }}>

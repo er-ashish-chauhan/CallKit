@@ -6,6 +6,8 @@ import Screen from "../../components/HOC/Screen";
 import { Endpoint } from 'react-native-sip2';
 import { shallowEqual, useSelector } from 'react-redux'
 
+
+
 const endpoint = new Endpoint();
 
 const DashboardScreen = props => {
@@ -57,7 +59,9 @@ const DashboardScreen = props => {
                 }
             }
 
-            let call = await endpoint.makeCall(account, "+917206330362", options);
+            let call = await endpoint.makeCall(account, "+917837038874", options);
+            // let call = await endpoint.makeCall(account, "+917206330362", options);
+            console.log(call, "test callllll")
 
         });
         endpoint.on("connectivity_changed", (online) => {
@@ -92,23 +96,51 @@ const DashboardScreen = props => {
 
 
     const createAccount = async () => {
-        // var configuration = {
-        //     name: "Ashraf",
-        //     username: "Ashraf",
-        //     domain: "pbx.sarhaantech.ca:5160",
-        //     password: "819839a1eb941f7af5d04fddf0d8d748",
-        //     transport: null, // Default TCP
-        //     proxy: "99.79.131.132:5160",
-        //     proxy:null,
-        //     regServer: "pbx.sarhaantech.ca:5160",
-        //     regHeaders: {
-        //         "X-Custom-Header": "Value"
-        //     },
-        //     regContactParams: ";unique-device-token-id="+fcmToken
-        // };
+        //     let configuration = {
+        //         "name": "MyUserName",
+
+        //         "username": "50363",
+        //         "password": "pass50363",
+        //         "domain": "sip.zadarma.com",
+        //         "regServer": "",
+        //         //"regServer": "sip.zadarma.com", // Default wildcard
+
+        //         /*
+        //         "username": "50363",
+        //         "password": "pass50363",
+        //         "domain": "172.16.104.17",
+        //         "regServer": "",
+        //         //"regServer": "172.16.104.17", // Default wildcard
+        //   */
+
+        //         "proxy": null,
+        //         "transport": "UDP",//null, // Default TCP
+
+        //         "regTimeout": 3600, // Default 3600
+        //         "regHeaders": {
+        //             //"X-Custom-Header": "Value"
+        //         },
+        //         //"regContactParams": ";unique-device-token-id=XXXXXXXXX",
+        //         "regOnAdd": true,  // Default true, use false for manual REGISTRATION
+
+        //         service: {
+        //             ua: "siptest",
+        //             stun: ['stun.l.google.com:19302', 'stun4.l.google.com:19302']
+        //         },
+
+        //         network: {
+        //             useAnyway: true,           // Default: true
+        //             useWifi: true,              // Default: true
+        //             use3g: true,                // Default: false
+        //             useEdge: true,             // Default: false
+        //             useGprs: true,             // Default: false
+        //             useInRoaming: true,        // Default: false
+        //             useOtherNetworks: true      // Default: false
+        //         }
+        //     };
 
         let configuration = {
-            "name": "Ashraf", 
+            "name": "Ashraf",
 
             "username": "1002",
             "password": "819839a1eb941f7af5d04fddf0d8d748",
@@ -120,12 +152,12 @@ const DashboardScreen = props => {
             "regHeaders": {
                 //"X-Custom-Header": "Value"
             },
-            "regContactParams": ";unique-device-token-id="+fcmToken,
+            //   "regContactParams": ";unique-device-token-id=" + fcmToken,
             "regOnAdd": true,  // Default true, use false for manual REGISTRATION
 
             service: {
                 ua: "siptest",
-                stun: ['stun.l.google.com:19302', 'stun4.l.google.com:19302']
+                stun: ['stun.l.google.com:5160', 'stun4.l.google.com:5160']
             },
 
             network: {
@@ -151,7 +183,7 @@ const DashboardScreen = props => {
     }
 
     const makeCall = async () => {
-        let account = {"_data": {"domain": "pbx.sarhaantech.ca:5160", "id": 0, "name": "Ashraf", "password": "819839a1eb941f7af5d04fddf0d8d748", "regContactParams": ";unique-device-token-id=1002", "regHeaders": "{X-Custom-Header=Value}", "regOnAdd": true, "regTimeout": "600", "registration": {"active": false, "status": "PJSIP_SC_TRYING", "statusText": "In Progress"}, "uri": "Ashraf <sip:Ashraf@pbx.sarhaantech.ca:5160>", "username": "Ashraf"}, "_registration": {"_active": false, "_reason": undefined, "_status": "PJSIP_SC_TRYING", "_statusText": "In Progress"}};
+        let account = { "_data": { "domain": "pbx.sarhaantech.ca:5160", "id": 0, "name": "Ashraf", "password": "819839a1eb941f7af5d04fddf0d8d748", "regContactParams": ";unique-device-token-id=1002", "regHeaders": "{X-Custom-Header=Value}", "regOnAdd": true, "regTimeout": "600", "registration": { "active": false, "status": "PJSIP_SC_TRYING", "statusText": "In Progress" }, "uri": "Ashraf <sip:Ashraf@pbx.sarhaantech.ca:5160>", "username": "Ashraf" }, "_registration": { "_active": false, "_reason": undefined, "_status": "PJSIP_SC_TRYING", "_statusText": "In Progress" } };
         let options = {
             headers: {
                 "P-Assserted-Identity": "Header example",
@@ -227,6 +259,7 @@ const DashboardScreen = props => {
                         }}
                     /> */}
                 </View>
+
             </View>
         </Screen>
     )
